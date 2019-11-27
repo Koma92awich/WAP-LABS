@@ -46,6 +46,8 @@ h1{
     font-size: 22pt;
     text-align: center;
     text-decoration: underline;
+    
+    letter-spacing: 0.25em;
 }
 
 h2{
@@ -55,6 +57,8 @@ h2{
     font-size: 18pt;
     text-align: left;
     text-decoration: underline;
+    display:inline;
+    letter-spacing: 0.25em;
 }
 a{
     color: #A4A400 ;

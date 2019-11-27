@@ -8,6 +8,9 @@ and open the template in the editor.
     Author     : koma9
 */
 
+figure{
+    text-align: left;
+}
 body {
   background-color: darkslategrey;
 }

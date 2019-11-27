@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 26, 2019, 2:29:13 PM
+    Author     : koma9
+*/
+
+body {
+  background-color: darkslategrey;
+}
+
+h1 {
+  color: lightblue;
+   text-align: center;
+  
+}
+h3 {
+  color: lightblue;
+  
+}
+
+ul,ol,p {
+    color: white;
+    font-family: verdana;
+  font-size: 15px;
+}
+
+#point{
+    color: gold;
+}
+.shout{
+    color: gold;
+}
+
+a {
+   color: #1E7EC8;
+   text-decoration: none; // changed from text-decoration:underline
+}
+
+
+
+a:hover {
+   text-decoration: underline; // changed from text:decoration:none
+}
+
+.mydropcaps{
+    
+    font-size: 18px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 1.8px;
+}

@@ -6,28 +6,93 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Sing Up Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="signup.css" type="text/css" rel="stylesheet"/> 
     </head>
     <body>
-        <form>
-            
-             First name:<input type="text" name="firstname"><br>
-             Gender: <input type="radio" name="gender" value="male" checked> Male<input type="radio" name="gender" value="female" checked> Female<br>
-             Age: <input type="text" name="age"><br>
-             Personality type: <input type="text" name="personality"><a href="#">(Don't know your type)</a> <br>
-             FavoriteOS : <select name = "dropdown">
-            <option value = "windows" selected>Windows OS</option>
-            <option value = "mac">MAC OS</option>
-            <option value = "ubuntu">Ubuntu OS</option>
-         </select><br/>
-             Seeking age: <input type="text" name="minimum" value="min"> to <input type="text" name="max" value="max"><br/>
-             <input type="submit" value="SignUp">
-             
-            
-         
-             
-        </form>
+         <p class="title"> New user signup : </p>
+
+    <form method="POST" action="signup-submit.php">
+        <table>
+            <tr>
+                <td> name :</td>
+                <td><input type='text' name="fullName" maxlength="16"> </td>
+            </tr>
+            <tr>
+                <td>
+                    gender:
+                </td>
+                <td>
+
+                    <input type="radio" name="gender" id="female" value="0" checked />
+                    <label for="female"> female </label>
+
+                    <input type="radio" name="gender" id="male" value="1" />
+                    <label for="male"> male </label>
+
+
+                </td>
+
+
+            </tr>
+            <tr>
+                <td> age :</td>
+                <td><input type='text' maxlength="2" size="6"></td>
+            </tr>
+            <tr>
+                <td> personality type :</td>
+
+                <td><input type='text' maxlength="4" size="6"> <a
+                        href="http://www.humanmetrics.com/cgi-win/JTypes2.asp.">
+                        ( <span class="dont"> Don't know your type </span>) </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td> favorite OS :</td>
+
+                <td>
+                    <select>
+                        <option selected>
+                            Window
+                        </option>
+                        <option>
+                            Mac
+                        </option>
+                        <option>
+                            OS
+                        </option>
+                        <option>
+                            X
+                        </option>
+                        <option>
+                            linux
+                        </option>
+                    </select>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> Seeking age:</td>
+
+                <td><input type='text' name="min" placeholder="min">to <input name="max" type='text' placeholder="max"
+                        maxlength="2" size="6"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="submit" type="submit" value="signup">
+                </td>
+            </tr>
+
+        </table>
+       
+    </form>
+    <div  class="validator">
+        <a href="https://validator.w3.org/check/referer"><img src="myimages/images/w3c-html.png" alt="Valid HTML5" /></a> <br />
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="myimages/images/w3c-css.png" alt="Valid CSS" /></a>
+    </div>
     </body>
 </html>

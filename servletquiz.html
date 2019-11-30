@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>Solutions to Introduction to servlet Quiz </h3>
+        
+ <p>1.  Web server refers to an execution infrastructure that handles HTTP requests and responses.
+ A web container container refers to a component of the web server that interacts with Java servlets and manages the lifecycle for servlets.</p>
+
+<p>2.A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means 
+of a request-response programming model. Mosttly to extend application hosted by web servers.</p>
+
+<p>3. By using the Hyper text transfer protocol  over TCP/IP. When a request comes to the web server, if the server sees the request is for 
+a servlet, it passes the request data to the servlet container. 
+ The servlet container locates the servlet, creates request and response objects and passes them to the servlet, and returns to the web
+ server the response stream that the servlet produces</p>
+
+<p>4.Request objects are created by the servlet/web container.</p>
+
+<p>5. States in the Life cycle of a servlet<br/>
+-Servlet class is loaded.<br/>
+-Servlet instance is created.<br/>
+-init method is invoked.<br/>
+-service method is invoked.<br/>
+-destroy method is invoked.</p>
+
+<p>6.The web/servlet container calls the init method only once after creating the servlet instance. 
+The init method is used to initialize the servlet. It is the life cycle method of the javax.servlet.Servlet interface. Syntax of the init method is :
+public void init(ServletConfig config) throws ServletException {.........} .</p>
+
+<p>7. You should override the doGet method from the HttpServlet class.</p>
+
+<p>8. Servlets are multithreaded in the sense that each time the service method is invoked , for each request there is a seperate thread running.
+
+<p>9. Servlet instance variables are shared by all threads created for each request when the service method is invoked. Hence not thread safe.</p>
+        
+    </body>
+</html>

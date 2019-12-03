@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <h1>JSP Introduction Quiz</h1>
+<br>
+
+<p>1. What is the main value of Java Server Pages?</p>
+<p>-Allow developers insert java code into HTML by making use of special JSP tgs.</p>
+
+<p>2. How are JSP pages related to servlets?</p>
+<p>-When JSP pages are compiled, they are converted to servlets</p>
+
+<p>3. How are JSP pages related to HTML?</p>
+<p>-JSP pages add server-side code to an HTML page. Thus JSP tags are withing HTML body</p>
+
+<p>4. Give an example of a JSP scriptlet and show how it will look in the JSP servlet .</p>
+
+<p> -JSP scriptlet: <% count = count *10;%> </p>
+<p>-JSP servlet: count = count * 10;%</p>
+
+<p>5. Give an example of a JSP declaration and show how it will look in the JSP servlet.</p>
+
+<p> -JSP Declaration: <%! int count = 0; %></p>
+<p>-JSP Servlet: int count = 0;</p>
+
+<p>6. Give an example of a JSP comment and show how it will look in the JSP servlet.</p>
+
+<p>-JSP comment: <%--This is a JSP comment--%></p>
+<p>-JSP Servlet: The JSP comments are ignored when a JSP is translated  </p>
+
+
+<p>7. Give an example of a JSP expression and show how it will look in the JSP servlet.</p>
+<p>JSP Expression: <%= ++count %> </p>
+<p>JSP Servlet: out.print( ++count );</p>
+
+
+<p>8. Give an example of a JSP directive and show how it will look in the JSP servlet.</p>
+
+<p>JSP Page Directive: <%@ page import="java.io.*,java.util.*, javax.servlet.*" %></p>
+<p> JSP servlet: import="java.io.*; import java.util.*; import javax.servlet.*; </p>
+
+
+<p>9. Explain how an EL expression is evaluated.</p>
+<p>The container evaluates the expression by checking in the page scope,request scope, session scope and application scope
+ respective if its not found in any scope. Other wise it ignores  the expression </p>
+
+
+<p>10. Explain how servlet attributes are involved in EL expressions.</p>
+<p>11. Explain how servlets and JSPs use request dispatch to interact.</p>
+    </body>
+</html>

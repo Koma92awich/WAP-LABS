@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+
+<h1>State Management Quiz</h1>
+<p>1. Can post requests be bookmarked? What are the problems? </p>
+
+ <p>-No, post requests can not bookmarked because  in the post method the data is passed in the HTTP request body.</p>
+
+<p>2. What is the purpose of request dispatching?</p>
+<p>-defines an object which can dispatch the request to any resources on the server. Thus forward or include the response of a resource in a Servlet.</p>
+
+<p>3. What is the difference between redirect and request dispatch?</p>
+<p>-A redirect in a servlet is letting the browser do the work through relative and absolute url redirects , thus the client  
+while a request dispactch in a servlet is having something else on the server side
+do the work. Thus in redirect the client notices a change in the URL but in a request dispatch the client does not see any changes in the url</p>
+
+<p>4. What is an attribute ?</p>
+<p>-It is a name/value pair(where the name is a String and Value is an object) in a map instance variable.</p>
+
+<p>5. What is the difference between attributes and parameters?</p>
+<p>-Parameters ar read only while attributes are read/write objects. </p>
+<p>-Parameters return Strings  while attributes are objects of any type but need to be casted .</p>
+
+
+<p>6. What are dangers of using attributes?</p>
+
+
+<p>7. What does it mean to say that http is stateless? Give an example of a stateful protocol.</p>
+<p>-For Http to be stateless it means that Http does not remember/ retain session information  from which client a request comes after it has delivered a response.
+-Example of stateful protocol is File transfer protocol (FTP)</p>
+
+<p>8. Give 5 different methods for maintaining state information (count each attribute scope as one
+method).</p>
+<p>-Session Atrributes</p>
+<p>-Context Atrribute</p>
+<p>-Request Attribute</p>
+<p>-Hidden Fields on a form</p>
+<p>-Cookies</p>
+
+<p>9. How long does a session last?
+-By default, a session lasts until there's 30 minutes of inactivity, but you can adjust this limit so a session lasts from a few seconds to several hours .</p>
+
+<p>10. What is a cookie, and how long does a cookie last?</p>
+<p>-Session cookies disappear once the user closes the browser window. All permanent cookies have an expiration date written in their code.</p>
+<p>11. What is the purpose of URL rewriting?</p>
+
+<p>-URL writing is a process of appending or modifying any url structure while loading a page. The request made by client is always a new request and the server 
+can not identify whether the current request is send by a new client or the previous same client. It is normally done when clients disable cookies </p>
+
+<p>12. Why does the request attribute report ‘null’ for the maintaining state demo?</p>
+<p>-This is because http is stateless protocol and there is no session set to hold the value of the request  </p>
+    </body>
+</html>

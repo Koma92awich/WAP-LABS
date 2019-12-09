@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <h1>JavaScript Exercises</h1>
+
+<p>1. What is the difference between the following 2 statements?<br>
+setTimeout(booyah, 2000);<br>
+setTimeout(booyah(), 2000);<br>
+
+-The first statement waits for 2000ms before calling the function booyah.<br>
+-The second statement calls the function booyah immediately without waiting 2000ms.<br>
+</p>
+
+<p>2. What do the following 2 alerts display (answer without running the code)?<br>
+var myfunc = function(a, x) {<br>
+ return a * x;<br>
+};<br>
+var x = myfunc(2, 3);<br>
+var y = myfunc;<br>
+alert(x);<br>
+alert(y(2,3));<br>
+</p>
+<p>-The first alert will display 6 and the second alert will display 6.</p>
+
+<p>3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that
+says “BOOYAH!”</p>
+<p>setTimeout(booyah1, 2000);</p>
+<p>setTimeout(booyah2(), 2000);</p>
+
+<p>function callBooyah1(){</p>
+<p>setTimeout(booyer1, 2000);</p>
+
+<p>}</p>
+
+<p>function booyah1(){</p>
+
+<p>alert("Am displayed after 2000ms");</p>
+<p>}
+</p>
+<p>4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
+for using it)?</p>
+<p>Unobtrusive Javascript is the seperation of HTML, CSS code from Javascript code. The practical application of Unobtrusive Javascript is when we have hundreds
+of line of code and hundreds of javascript functions , seperating the Javascript code from the HTML and CSS makes it easier to read and work with.</p>
+
+
+    </body>
+</html>

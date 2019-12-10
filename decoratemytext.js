@@ -7,40 +7,46 @@
 window.onload = function(){
     
     document.getElementById("deco").onclick = changeSize;
-    document.getElementById("checking").onchange = blingCheckBox;
+    document.getElementById("checked").onchange = blingCheckBox;
     document.getElementById("clickme").onclick = biggerFont;
 };
 
+
+ //const fontSize =  parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue('font-size')); 
+//var f1 = 0;
+//var i = 2;
 function popup(){
     alert("Hello World");
 }
 
+
 function changeSize(){
-    //document.getElementById("tx").style.fontSize = "24pt";
     event.preventDefault();
     var size = document.getElementById("tx").style.fontSize;
-    var bigger = size.substring(size.length - 2, 0);
-   
+    var bigger = parseInt(size.substring(size.length - 2, 0));
+    
     bigger += 2;
     document.getElementById("tx").style.fontSize = bigger + "pt";
+    
+     //f1 = fontSize+ i; i+= 2;
+  //document.getElementById("txt").style.fontSize = f1 +"pt";
 }
-
-function biggerFont() {
-//var size =
-//parseInt(document.getElementById("clickme").style.fontSize);
-  var size = parseInt($("#clickme").css('font-size'));
-  alert(size);
-size += 4;
-document.getElementById("clickMe").style.fontSize = size + "pt";
-}
-
-
 
 function blingCheckBox(){
-   // alert("checked");
-  // if(document.getElementById(""))
-    document.getElementById("tx").style.fontWeight = "bold";
-     document.getElementById("tx").style.color = "green";
-      document.getElementById("tx").style.textDecoration = "underline";
-    
+   
+if(document.getElementById("checked").checked === true){
+        document.getElementById("tx").style.fontWeight = "bold";
+        document.getElementById("tx").style.color = "green";
+        document.getElementById("tx").style.textDecoration = "underline";        
+        onchange();
+    }else if(document.getElementById("checked").checked === false){ 
+        document.getElementById("tx").style.fontWeight = "normal";        
+        document.getElementById("tx").style.color = null;
+        document.getElementById("tx").style.textDecoration = null;                
+        onchange();        
+    }
+}
+
+function onchange(){
+    alert("Bling Checked, uncheck to go back to normal color");
 }

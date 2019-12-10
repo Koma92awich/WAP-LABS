@@ -15,6 +15,9 @@ window.onload = function(){
  //const fontSize =  parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue('font-size')); 
 //var f1 = 0;
 //var i = 2;
+
+//var stle = window.getComputedStyle()
+//var ss = parseInt(stle) +2;
 function popup(){
     alert("Hello World");
 }
@@ -22,10 +25,11 @@ function popup(){
 
 function changeSize(){
     event.preventDefault();
-    var size = document.getElementById("tx").style.fontSize;
-    var bigger = parseInt(size.substring(size.length - 2, 0));
+    //var size = document.getElementById("tx").style.fontSize;
+   // var big = parseInt(size.substring(size.length - 2, 0));
+    var big = parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue("font-size"));
     
-    bigger += 2;
+    var bigger =  parseInt(big) + 2;
     document.getElementById("tx").style.fontSize = bigger + "pt";
     
      //f1 = fontSize+ i; i+= 2;

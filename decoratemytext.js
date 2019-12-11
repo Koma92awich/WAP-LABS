@@ -6,24 +6,70 @@
 
 window.onload = function(){
     
-    document.getElementById("deco").onclick = changeSize;
+    var makeBig =   document.getElementById("deco");
     document.getElementById("checked").onchange = blingCheckBox;
+    var piglatin = this.document.getElementById("piglatin");
+    var malkovith=this.document.getElementById("malkovith");
+    var mytextarea = document.getElementById("tx");
+    var timer = null;
+    
+    piglatin.onclick=function () {
+        var val = mytextarea.value.toLowerCase();
+        if(val[0]=="a"||val[0]=="e"||val[0]=="i"||val[0]=="o"||val[0]=="u"){
+            mytextarea.value=val+"-ay";
+        }
+        else{
+            mytextarea.value=val.substring(1,val.length)+val[0]+"-ay";
+        }
+    };
+    
+    malkovith.onclick=function(){
+        var val=mytextarea.value;
+        if( val.length>=5){
+            mytextarea.value= "malkovith";
+        }
+
+    };
+    
+   function delayTime () {
+    
+  if (timer === null) {
+    timer = setInterval(changeSize, 500);
+  } else {
+    clearInterval(timer);
+    timer = null;
+  }
+}
+    
+    
+    makeBig.onclick = function(){
+//    event.preventDefault();
+    
+    var big = parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue("font-size"));
+    
+    var bigger =  parseInt(big) + 2;
+    
+    document.getElementById("tx").style.fontSize = bigger + "pt";
+
+//var m = window.getComputedStyle(mytextarea).fontSize;
+//        if (m == "16px")
+//            m = Number.parseInt(window.getComputedStyle(mytextarea).fontSize) * (3 / 4) + 2 + "pt";
+//        else
+//            m = Number.parseInt(window.getComputedStyle(mytextarea).fontSize) + 2 + "pt";
+//
+//        mytextarea.style.fontSize = m;
+ 
+
+};
+
+
    
 };
 
 function popup(){
     alert("Hello World");
 }
-function changeSize(){
-    event.preventDefault();
-    
-    var big = parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue("font-size"));
-    
-    var bigger =  parseInt(big) + 2;
-    document.getElementById("tx").style.fontSize = bigger + "pt";
- 
 
-}
 
 function blingCheckBox(){
    
@@ -47,13 +93,4 @@ function onchange(){
     alert("Bling Checked, uncheck to go back to normal color");
 }
 
-var timer = null;
-function delayMsg() {
-    
-  if (timer === null) {
-    timer = setInterval(changeSize, 5000);
-  } else {
-    clearInterval(timer);
-    timer = null;
-  }
-}
+//var timer = null;

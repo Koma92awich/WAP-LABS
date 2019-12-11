@@ -10,20 +10,25 @@ and open the template in the editor.
 
 
 #tx{
-    margin: auto;
-    width: 90%;
-    height: 400px;
-    font-size: 12pt;
+   margin-left: auto;
+    margin-right: auto;
     font-family: monospace;
     font-weight: bold;
+    font-size: 12pt;
+    width: 90%;
+    height: 400px;
     
 }
 
 
 body{
-    background-color: #CCCCFF;
-   margin: auto;
-   font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+    background-color:#CCCCFF;
+    font-family: sans-serif;
+    font-size: 14pt;
 }
 
 #disp{
@@ -43,6 +48,13 @@ body{
 }
 fieldset{
     display: inline;
+}
+
+.cornner{
+/*    right:0px;
+    position: fixed;*/
+    bottom: 8px;
+  right: 16px;
 }
 
 /*legend {

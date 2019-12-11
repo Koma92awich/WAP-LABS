@@ -16,40 +16,51 @@ and open the template in the editor.
     <body>
         
         <p class="para">CSE 190 M ASCII Animation Viewer</p>
-        <div >
-            <textarea id="tx" rows="20" cols="80"></textarea>
+        
+        <div>
+            <textarea id="tx" rows="20" cols="80">
+                
+            </textarea>
             
-                <fieldset class="fesible">
+            <fieldset class="fesible">
                 <legend> Play control:</legend>
                 <button id="start">Start</button> <button id="stop">Stop</button>
             </fieldset>
             
-           <fieldset class="fesible"><legend>Animation:</legend>
-               <select id="animation">
+           <fieldset class="fesible">
+               <legend>Animation:</legend>
+            <select id="animation">
                     
             <option selected="selected" value="Blank">Blank</option>
             <option value="Exercise">Exercise</option>
             <option value="Juggler">Juggler</option>
             <option value="Bike">Bike</option>
             <option value="Dive">Dive</option>
-                    </select>
+            </select>
            </fieldset>
             
-                        <fieldset class="fesible"><legend>Size:</legend>
-                            <select id="fontsize">
-                <option value="7pt">Tiny</option>
+            <fieldset class="fesible">
+             
+                <legend>Size:</legend>
+             <select id="fontsize">
+            <option value="7pt">Tiny</option>
             <option value="10pt">Small</option>
             <option value="12pt" selected="selected">Medium</option>
             <option value="16pt">Large</option>
             <option value="24pt">Extra Large</option>
             <option value="32pt">XXL</option>
-                    </select></fieldset>
+                    
+             </select>
+            </fieldset>
             
-                <fieldset class="fesible"><legend>Speed:</legend> <input type="checkbox" id="turbo">Turbo</fieldset>
+                <fieldset class="fesible">
+                    <legend>Speed:</legend> 
+                    <input type="checkbox" id="turbo">Turbo
+                </fieldset>
             </div>
        
         
-        <div id="validate">
+        <div class="cornner">
                 <a href="https://validator.w3.org/check/referer">
                     <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png"
                          alt="html validator"/>
@@ -63,6 +74,7 @@ and open the template in the editor.
         <img src="http://mumstudents.org/jshint/jshint-small.png" alt="JavaScript Lint">
     </a>
 </div>
+        
     
             
         

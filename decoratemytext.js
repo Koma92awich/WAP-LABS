@@ -6,7 +6,7 @@
 
 window.onload = function(){
     
-    document.getElementById("deco").onclick = 
+    document.getElementById("deco").onclick = changeSize;
     document.getElementById("checked").onchange = blingCheckBox;
    
 };
@@ -32,11 +32,13 @@ if(document.getElementById("checked").checked === true){
         document.getElementById("tx").style.color = "green";
         document.getElementById("tx").style.textDecoration = "underline"; 
         document.getElementById("tx").style.textAlign = "right";
+        document.getElementById("bod").style.backgroundImage="url(\"http://www.cs.washington.edu/education/courses/190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg\")";
         onchange();
     }else if(document.getElementById("checked").checked === false){ 
         document.getElementById("tx").style.fontWeight = "normal";        
-        document.getElementById("tx").style.color = "null";
-        document.getElementById("tx").style.textDecoration = "null";                
+        document.getElementById("tx").style.color = "";
+        document.getElementById("tx").style.textDecoration = "none"; 
+        document.getElementById("bod").style.backgroundImage="";
         onchange();        
     }
 }

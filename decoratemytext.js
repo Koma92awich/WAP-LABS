@@ -6,34 +6,23 @@
 
 window.onload = function(){
     
-    document.getElementById("deco").onclick = changeSize;
+    document.getElementById("deco").onclick = 
     document.getElementById("checked").onchange = blingCheckBox;
-    document.getElementById("clickme").onclick = biggerFont;
+   
 };
 
-
- //const fontSize =  parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue('font-size')); 
-//var f1 = 0;
-//var i = 2;
-
-//var stle = window.getComputedStyle()
-//var ss = parseInt(stle) +2;
 function popup(){
     alert("Hello World");
 }
-
-
 function changeSize(){
     event.preventDefault();
-    //var size = document.getElementById("tx").style.fontSize;
-   // var big = parseInt(size.substring(size.length - 2, 0));
+    
     var big = parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue("font-size"));
     
     var bigger =  parseInt(big) + 2;
     document.getElementById("tx").style.fontSize = bigger + "pt";
-    
-     //f1 = fontSize+ i; i+= 2;
-  //document.getElementById("txt").style.fontSize = f1 +"pt";
+ 
+
 }
 
 function blingCheckBox(){
@@ -41,16 +30,28 @@ function blingCheckBox(){
 if(document.getElementById("checked").checked === true){
         document.getElementById("tx").style.fontWeight = "bold";
         document.getElementById("tx").style.color = "green";
-        document.getElementById("tx").style.textDecoration = "underline";        
+        document.getElementById("tx").style.textDecoration = "underline"; 
+        document.getElementById("tx").style.textAlign = "right";
         onchange();
     }else if(document.getElementById("checked").checked === false){ 
         document.getElementById("tx").style.fontWeight = "normal";        
-        document.getElementById("tx").style.color = null;
-        document.getElementById("tx").style.textDecoration = null;                
+        document.getElementById("tx").style.color = "null";
+        document.getElementById("tx").style.textDecoration = "null";                
         onchange();        
     }
 }
 
 function onchange(){
     alert("Bling Checked, uncheck to go back to normal color");
+}
+
+var timer = null;
+function delayMsg() {
+    
+  if (timer === null) {
+    timer = setInterval(changeSize, 5000);
+  } else {
+    clearInterval(timer);
+    timer = null;
+  }
 }

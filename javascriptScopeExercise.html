@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>JavaScript Scope Excercise</h1>
+
+<p>1. Determine what this Javascript code will print out (without running it):<br>
+x = 1;<br>
+var a = 5;<br>
+var b = 10;<br>
+var c = function(a, b, c) {<br>
+var x = 10;<br>
+document.write(x);<br>
+document.write(a);<br>
+var f = function(a, b, c) {<br>
+b = a;<br>
+document.write(b);<br>
+b = c;<br>
+var x = 5;<br>
+}<br>
+f(a,b,c);<br>
+document.write(b);<br>
+ }<br>
+c(8,9,10);<br>
+document.write(b);<br>
+document.write(x);<br>
+}<br>
+</p>
+<p> The output will be 10 8 8 9 10 1 </p>
+
+<p>2. What is the difference between a method and function?</p>
+<p>A function is defined outside of an object. A method is defined as the property of an object.</p>
+
+<p>3. What does 'this' refer to when used in a Java method?</p>
+<p>it refers/is a reference to the current object whose method or constructor is being invoked.</p>
+
+<p>4. What does 'this' refer to when used in a JavaScript method?</p>
+<p>In an object method, this refers to the "owner" of the method.</p>
+
+
+<p>5. What does 'this' refer to when used in a JavaScript constructor function?</p>
+<p>In a constructor function 'this' does not have a value. It is a substitute for the new object. The value of 'this' will become the new object when a new object is created.</p>
+
+
+<p>6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.
+When f is called by x.f( ), what does 'this' refer to?</p>
+<p>Here 'this' refers to object x.</p>
+
+<p>7. What is a free variable in JavaScript?</p>
+<p>A variable referred to by a function that is not one of its parameters or local variables.</p>
+
+<p>8. Create an object that has properties with name = "fred" and major="music" and a property that is a function
+that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.</p>
+
+<p>var obj = {<br>
+
+name:"fred",<br>
+major:"music",<br>
+minOrSquare :function(num1 , num2){<br>
+
+if(num1 < num2){<br>
+return num1;<br>
+}else if(num2 < num1){<br>
+return num2;<br>
+}<br>
+if(num1 == num2){<br>
+
+return num1*num2;<br>
+}<br>
+
+
+}<br>
+
+}<br>
+
+</p>
+
+<p>9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.<br>
+Employee objects have the following fields: name, salary, position.<<br>
+
+function Employee(name,salary,position){<br>
+this.name = name;<br>
+this.salary = salary;<br>
+this.position = position;<br>
+
+}<br>
+var koma = new Employee("Koma", 150000,"Senior developer");<br>
+var Godfrey = new Employee("Godfrey", 200000, "System Analyst");<br>
+var Awich = new Employee("Awich" , 500000, "Java developer");<br>
+</p>
+
+<p>10. Write a Javascript function that takes any number of input arguments and returns the product of the
+arguments.<br>
+
+
+function product(a,b,...more){<br>
+
+var prdt = a * b;<br>
+
+if(more.length > 0){<br>
+
+for(var i=0; i< more.length; i++){<br>
+
+prdt *= more[i];<br>
+
+}<br>
+}<br>
+
+console.log(prdt);<br>
+}<br>
+</p>
+
+
+
+<p>11. Write an arrow function that returns the maximum of its three input arguments.<br>
+
+maximum = (num1, num2,num3) =>{<br>
+
+if(num1 > num2 && num1 >num3){<br>
+return num1;<br>
+}<br>
+
+else if(num2 > num1 && num2 >num3){<br>
+return num2;<br>
+}<br>
+
+else if(num3 > num1 && num3 >num2){<br>
+return num3;<br>
+}<br>
+
+}<br>
+</p>
+
+    </body>
+</html>

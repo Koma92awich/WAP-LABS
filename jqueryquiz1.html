@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+        code {
+            display: block;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Quiz I</h1>
+    <ol>
+        <li>In jQuery terminology, what is the difference between the <q>jQuery function</q> and the <q>jQuery object</q>?
+            <blockquote>
+                A jQuery function lets you select elements using CSS selectors and pass them to the function a parameters while
+ jQuery object is a collection of DOM objects that defines methods to act on the the elements refered to by the selectors.
+            </blockquote>
+        </li>
+        <li>
+            <p>Write jQuery code to find all h1 elements that are children of a div element and make their background color red.</p>
+            <p>Sample HTML:</p>
+            <code>&lt;body&gt;
+    &lt;h1&gt;abc&lt;/h1&gt;&lt;br&gt;&lt;div&gt;
+        &lt;h1&gt;div-1&lt;/h1&gt;
+        &lt;h1&gt;div-2&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;h1&gt;xyz&lt;/h1&gt;
+&lt;/body&gt;</code>
+            <blockquote>
+                <code>$(document).ready(function(){
+    $('div h1').css('background-color', 'red');
+});</code>
+            </blockquote>
+        </li>
+        <li>
+            <p>Use a jQuery method to insert the text "YES!" at the end of the &lt;p&gt; element.</p>
+            <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+
+&lt;!—INSERT YOUR JQUERY CODE HERE  --&gt;
+            <code>$(document).ready(function() {
+    $('p').append('YES!');
+});</code>
+
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Is jQuery FUN or what? &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+
+            
+        </li>
+    </ol>
+</body>
+    
+</html>

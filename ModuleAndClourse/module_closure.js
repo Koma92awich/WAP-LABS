@@ -78,7 +78,7 @@ var rudyTimer = (function (){
 var accountModule = (function () {
 
 
-    return {
+  return function(){  return {
         createAccount: function (accountName, deposit) {
             this.accountName = accountName;
             this.deposit = deposit;
@@ -87,7 +87,8 @@ var accountModule = (function () {
             return "Account name : " + this.accountName + "    Balance : " + this.deposit;
         }
     };
-});
+  };
+})();
 
 
 

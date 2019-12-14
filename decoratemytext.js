@@ -88,23 +88,25 @@ window.onload = function(){
 
     };
     
-   function delayTime () {
-    
+  // function delayTime () {
+    makeBig.onclick = function(){
   if (timer === null) {
-    timer = setInterval(changeSize, 500);
+    timer = setInterval(change, 500);
   } else {
     clearInterval(timer);
     timer = null;
   }
-}
+};
     
     
-    makeBig.onclick = function(){
+   // makeBig.onclick = function(){
+        function change(){
 //    event.preventDefault();
     
     var big = parseInt(getComputedStyle(document.getElementById("tx")).getPropertyValue("font-size"));
     
     var bigger =  parseInt(big) + 2;
+   // alert(bigger);
     
     document.getElementById("tx").style.fontSize = bigger + "pt";
 

@@ -18,7 +18,7 @@ setTimeout(booyah, 2000);<br>
 setTimeout(booyah(), 2000);<br>
 
 -The first statement waits for 2000ms before calling the function booyah.<br>
--The second statement calls the function booyah immediately without waiting 2000ms.<br>
+-The second statement calls the function booyah immediately without waiting 2000ms and passes the result to setTimeout as a parameter<br>
 </p>
 
 <p>2. What do the following 2 alerts display (answer without running the code)?<br>
@@ -42,14 +42,10 @@ says “BOOYAH!”</p>
 
 <p>}</p>
 
-<p>function booyah1(){</p>
-
-<p>alert("Am displayed after 2000ms");</p>
 <p>
-    function callBooyah2(){</p>
-    
-    <p>setTimeout(alert, 2000, "booyah");</p>
-    <p>}
+
+function booyah1() { alert('BOOYAH'); }</p>
+<p>function booyah2() { return booyah1; 
 </p>
 <p>4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
 for using it)?</p>

@@ -4,77 +4,43 @@
  * and open the template in the editor.
  */
 window.onload = function () {
+
+document.getElementById("buttonClick").onclick = accessPrivateRudy;
+//doucument.getElementById("ac").onclick = banking.createAccount;
+
 var timer = null;// stores ID of the interval timer
+var accountInfoList = [];
 
-var rudyTimer = (function (){
-    
-    if(timer === null){
-        
-        timer = setInterval(rudy,1000);
-    }else{
-        
-        clearInterval(timer);
-        timer = null;
+var rubyTimer = (function () {
+    var timer = null;  // stores ID of interval timer
+    function startRudy() {
+        if (timer === null) {
+            timer = setInterval(rudy, 1000);
+        } else {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+
+    function rudy() {   // called each time the timer goes off
+        document.getElementById("dis").innerHTML += " Rudy!";
     }
     
-    function rudy(){
-        
-        document.getElementById("dis").innerHTML += "Rudy!"; 
-    }
-    } );
+    return {
+        returnRudy: function(){
+            startRudy();
+        }
+    };
+})();
 
 
-//var accountDetails = (function(){
-//    
-//return {
-//    
-//    accountCreated: function(accName,deposit ){
-//        this.accName = accName;
-//        this.deposit = deposit;
-//    },
-//    
-//    print:function (){
-//        return "Account Name :" +this.accName + "  Balace : " + this.deposit;
-//    }
-//    
-//    
-//} ;   
-//    
-//});
+function accessPrivateRudy(){
+    rubyTimer.returnRudy();
+}
+
+
+
 //
-//
-//
-//windows.onload = function(){
-//    
-//    var form = document.getElementById("form");
-//    var textArea = document.getElementById("textArea");
-//    var accountInfoList = [];
-//    var addAcc;
-//    
-//    form.onsubmit = submit;
-//    
-//   function submit() {
-//        var name = document.getElementById("accountName").value;
-//        var balance = document.getElementById("deposit").value;
-//        
-//        addAcc = accountDetails();
-//        
-//        addAcc.accountCreated(name, balance);
-//        
-//        accountInfoList.push(addAcc);
-//        
-//        var showAccs = "";
-//        for (var i = 0; i < accountInfoList.length; i++) {
-//            showAccs += accountInfoList[i].print() + "\n";
-//        }
-//        textArea.value = showAccs;
-//        form.reset();
-//        return false;
-//        
-//    }
-//};
-
-
 var accountModule = (function () {
 
 
@@ -116,4 +82,45 @@ var accountModule = (function () {
         return false;
     }
 };
+
+
+
+
+
+
+
+//var banking = (function(){
+//    
+//    function accounts(name,deposit){
+//        this.name = name;
+//        this.deposit = deposit;
+//        
+//        this.toStr = function(){
+//            return  "Account name : " + this.name + "    Balance : " + this.deposit;
+//        };
+//        
+//    }
+//    
+//    function updateTextArea(){
+//        var textarea = document.getElementById("textArea");
+//        textarea.value = " ";
+//        for(var i in accountInfoList){
+//            textarea += accountInfoList[i].toStr() + "\n";
+//        }
+//    }
+//    
+//    return {
+//        
+//        createAccount:function(){
+//            
+//            var acName = document.getElementById("accountName").value;
+//            var balance = document.getElementById("deposit").value;
+//            alert(balance);
+//            accountInfoList.push(new accounts(acName,balance));
+//            updateTextArea();
+//        }
+//    };
+//    
+//    
+//    })();
 

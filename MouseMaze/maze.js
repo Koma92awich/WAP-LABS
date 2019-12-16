@@ -5,21 +5,44 @@
  */
 //var win = true;
 
+(function(){
+    
 $(document).ready(function(){
-   // $("#maze.boundary").mouseover(red);
-    $("#start").mouseover(function(){
-    
-    $("h1").text("you have started");
-  });
-    $("#end").mouseover(function(){
-        $("h2").text("you have won");
-    });
    
-   // $("#test").click(function(){
-   //     alert("fin");
-   // });
-    
+   $("#start").click(function(){
+       
+       $(".boundary").removeClass("youlose");
+       $("#status").text("Start moving");
+       
+       
+       $(".boundary").on("mouseenter",function(){
+           
+           $(".boundary").addClass("youlose");
+           $("status").text("You lose:(");
+       });
+       
+       $("#maze").on("mouseleave",function(){
+           $(".boundary").addClass("youlose");
+           $("status").text("You lose:(");
+           $("end").off("mouseover");
+           
+       });
+       
+       $("#end").on("mouseover",function(){
+           $("status").text("You win!");
+           $(".boundary").off("mouseenter");
+           $("#maze").off("mouseleave");
+           
+       });
+       
+       
+       
+       
+       
+   });
     
     
     
 });
+
+})();

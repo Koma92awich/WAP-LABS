@@ -25,7 +25,7 @@ $(document).ready(function () {
             var x = ((index % 4) * 100) ;
             var y = (Math.floor(index / 4) * 100) ;
 
-            console.log("item: "+index+" x: "+x+" y: "+y);
+           // console.log("item: "+index+" x: "+x+" y: "+y);
 
             // set basic style and background
             $(element)
@@ -46,8 +46,9 @@ $(document).ready(function () {
     init();
 
     $("#puzzlearea > div").click(function(){
-        var x = parseInt($(this).css("left"));
+        var x = parseInt($(this).css("right"));
         var y = parseInt($(this).css("top"));
+      
         if(canMove(x,y,emptyX,emptyY))
             move(this);
     });
